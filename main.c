@@ -4,19 +4,39 @@
 
 int main() {
   // 1
-  int arr[10];
+  int a[10];
 
   // 2
-  arr[0] = 0;
+  a[0] = 0;
 
   // 3
   srand(time(NULL));
-  for (int i = 0; i < 10; i ++) arr[i] = rand();
+  int i;
+  for (i = 0; i < 10; i ++) a[i] = rand();
 
   // 4
-  for (int i = 0; i < 10; i ++) printf("%d ", arr[i]);
-  printf("\n");
+  for (int i = 0; i < 10; i ++) printf("%d ", a[i]);
+  printf("\n\n");
+
+  // 5
+  int b[10];
+
+  // 6
+  int *ap = a;
+  int *bp = b;
+
+  // 7
+  i = 9;
+  for (i = 9; i >= 0; i --) {
+    *(bp + i) = *(ap - 9 - i);
+    bp[i] = ap[9 - i];
+  }
+  for (int i = 0; i < 10; i ++) printf("%d ", b[i]);
+  printf("\n\n");
 
   return 0;
+
+
+
 
 }
