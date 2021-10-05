@@ -12,7 +12,8 @@ int main() {
   // 3
   srand(time(NULL));
   int i;
-  for (i = 0; i < 10; i ++) a[i] = rand();
+  a[0] = 0;
+  for (i = 1; i < 10; i ++) a[i] = rand();
 
   // 4
   for (int i = 0; i < 10; i ++) printf("%d ", a[i]);
@@ -35,8 +36,4 @@ int main() {
   printf("\n\n");
 
   return 0;
-
-
-
-
 }
